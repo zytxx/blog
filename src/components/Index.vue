@@ -8,7 +8,7 @@
     width: 100px;
     height: 100px;
     span{
-      font-size: 12px;
+      // font-size: 12px;
       color:red;
     }
   }
