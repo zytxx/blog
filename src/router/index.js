@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/components/Index'
 
 Vue.use(Router)
 
@@ -12,8 +11,13 @@ export default new Router({
     },
     {
       path: '/index',
-      name: 'Index',
-      component: Index
+      component: resolve => require(['../components/common/Frame.vue'], resolve),
+      children: [
+        {
+          path: '/',
+          component: resolve => require(['../components/Index.vue'], resolve)
+        }
+      ]
     }
   ]
 })
