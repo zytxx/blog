@@ -36,8 +36,11 @@ export default {
   min-width: 1100px;
   .container{
     flex:1;
+    min-height: 500px;
     margin:2px 15%;
-    background: #eee;
+    background: #eaeaea;
+    border-radius:10px;
+    padding:10px;
   }
   .top{
     padding: 10px;

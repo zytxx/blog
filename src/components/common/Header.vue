@@ -27,15 +27,15 @@
           float: right;
           height: 58px;
           border: 1px solid red;
-          &::after{
-            content: '';
-            display:block;
-            clear:both;
-          }
           span{
             display: inline-block;
             transition: all .5s ease-in .5s;
           }
+        }
+        &::after{
+          content: '';
+          display:block;
+          clear:both;
         }
     }
 </style>
