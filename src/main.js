@@ -9,6 +9,11 @@ import 'normalize.css'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 
+// 引入markdown 编辑器
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
+
+Vue.use(mavonEditor)
 Vue.use(iView)
 
 Vue.config.productionTip = false
@@ -17,6 +22,8 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {
+    App
+  },
   template: '<App/>'
 })

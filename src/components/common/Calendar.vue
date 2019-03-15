@@ -22,12 +22,13 @@
 <style lang='scss' scoped>
 .time-warp {
   width: 100%;
+  padding: 20px;
   position: relative;
   &::after {
     position: absolute;
     content: '-1s';
-    top: 48px;
-    right: 5px;
+    top: 70px;
+    right: 80px;
     font-size: 12px;
     animation: run 1s ease-out infinite;
     @keyframes run {
@@ -51,14 +52,14 @@
     display: flex;
     .month {
       margin-top: 6px;
-      flex: 1;
+      flex: 2;
       .day {
         line-height: 16px;
         text-align: right;
       }
     }
     .year {
-      flex: 1;
+      flex: 3;
       line-height: 48px;
       font-size: 48px;
     }
@@ -67,20 +68,19 @@
     color: #2db7f5;
     position: relative;
     text-align: center;
-    margin-left: 68px;
     font-size: 34px;
     &::after {
       position: absolute;
       content: ':';
       top: 0px;
-      left: 69px;
+      left: 116px;
       font-size: 30px;
     }
     &::before {
       position: absolute;
       content: ':';
       top: 0px;
-      left: 116px;
+      left: 165px;
       font-size: 30px;
       animation: dropdown0 1s ease-in-out infinite;
       @keyframes dropdown0 {
@@ -96,13 +96,20 @@
   .process {
     width: 80%;
     height: 20px;
-    margin: 10px auto;
+    margin: 20px auto;
     background: #2db7f5;
-    margin-left: 68px;
     position: relative;
     .gone {
       height: 20px;
-      background: gray;
+      // background: gray;
+      // background: repeating-linear-gradient(135deg, #808695, #2db7f5 10px);
+      background: repeating-linear-gradient(
+        135deg,
+        gray,
+        gray 2px,
+        #2db7f5 0,
+        #2db7f5 4px
+      );
     }
     .tips {
       font-size: 12px;

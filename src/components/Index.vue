@@ -86,6 +86,21 @@
           </li>
         </ul>
       </div>
+      <div class="hot">
+        <div class="title">热门</div>
+        <ul>
+          <li>1.CSS 毛玻璃效果</li>
+          <li>2.CSS 毛玻璃效果</li>
+          <li>3.CSS 毛玻璃效果</li>
+          <li>4.CSS 毛玻璃效果</li>
+          <li>5.CSS 毛玻璃效果</li>
+          <li>6.CSS 毛玻璃效果</li>
+          <li>7.CSS 毛玻璃效果</li>
+          <li>8.CSS 毛玻璃效果</li>
+          <li>9.CSS 毛玻璃效果</li>
+          <li>10.CSS 毛玻璃效果</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -157,8 +172,7 @@
     width: 340px;
     padding-left: 10px;
     .time {
-      margin-right: 68px;
-      padding: 30px 0;
+      padding: 10px 0;
     }
     .art-class {
       width: 100%;
@@ -201,6 +215,57 @@
           content: '';
           display: block;
           clear: both;
+        }
+      }
+    }
+    .hot {
+      width: 100%;
+      font-size: 30px;
+      text-align: center;
+      .title {
+        border-bottom: 2px solid #6669ff;
+      }
+      ul {
+        margin-top: 20px;
+        font-size: 16px;
+        text-align: left;
+        li {
+          position: relative;
+          //隐藏溢出的径向渐变背景
+          overflow: hidden;
+          list-style-type: none;
+          margin-left: 30px;
+          &:hover {
+            color: #66b5ff;
+            cursor: pointer;
+          }
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            //设置径向渐变
+            background-image: radial-gradient(
+              circle,
+              #666 10%,
+              transparent 10.01%
+            );
+            background-repeat: no-repeat;
+            background-position: 50%;
+            transform: scale(10, 10);
+            opacity: 0;
+            transition: transform 0.3s, opacity 0.5s;
+          }
+          &:active::after {
+            transform: scale(0, 0);
+            opacity: 0.3;
+            // 设置初始状态
+            transition: 0s;
+          }
         }
       }
     }

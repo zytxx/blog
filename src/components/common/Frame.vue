@@ -30,26 +30,26 @@ export default {
   }
 }
 </script>
-<style type="text/css" lang="scss">
+<style type="text/css" lang="scss" scoped>
 .all {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    min-width: 1100px;
-    .container {
-        flex: 1;
-        min-height: 500px;
-        margin: 2px 15%;
-        background: #eaeaea;
-        border-radius: 10px;
-        padding: 10px;
-    }
-    .top {
-        padding: 10px;
-        background: #888;
-        color: #fff;
-        text-align: center;
-        border-radius: 2px;
-    }
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  min-width: 1100px;
+  .container {
+    flex: 1;
+    min-height: 500px;
+    margin: 2px 15%;
+    background: #eaeaea;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .top {
+    padding: 10px;
+    background: #888;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+  }
 }
 </style>
